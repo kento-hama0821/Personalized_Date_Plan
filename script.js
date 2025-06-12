@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 将来のチャットページへの遷移処理
+    // チャットページへの遷移処理
     const startLink = document.getElementById('start-link');
     if (startLink) {
         startLink.addEventListener('click', function(event) {
@@ -106,8 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.opacity = '0';
 
             setTimeout(() => {
-                alert("チャットページへ遷移します！(現在は未作成)");
-                document.body.style.opacity = '1';
+                window.location.href = 'chat/chat.html';
             }, 800);
         });
     }

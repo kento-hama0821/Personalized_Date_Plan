@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Concierge Chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+    <!-- Main Chat Container -->
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="ai-info">
+                <i class="fas fa-robot"></i>
+                <span class="ai-name">AI デートプラン作成</span>
+            </div>
+            <div class="ai-status">
+                <span class="status-text">オンライン</span>
+                <div class="typing-indicator hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages Container -->
+        <div class="messages-container">
+            <!-- AI Message Example -->
+            <div class="message ai-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    こんにちは！あなたの理想のデートプランを一緒に考えましょう。
+                </div>
+            </div>
+
+            <!-- User Message Example -->
+            <div class="message user-message">
+                <div class="message-content">
+                    よろしくお願いします！
+                </div>
+            </div>
+        </div>
+
+        <!-- Options Container -->
+        <div class="options-container">
+            <button class="option-button">選択肢 1</button>
+            <button class="option-button">選択肢 2</button>
+            <button class="option-button">選択肢 3</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="chat.js"></script>
+    <script>
+        // Particles.js Configuration
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    animation: { enable: true, speed: 1, minimumValue: 0.1, sync: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    animation: { enable: true, speed: 2, minimumValue: 0.3, sync: false }
+                },
+                move: {
+                    enable: true,
+                    speed: 0.5,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    outModes: { default: "out" }
+                }
+            },
+            interactivity: {
+                detectsOn: "canvas",
+                events: {
+                    onHover: { enable: true, mode: "repulse" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html> 
